@@ -19,7 +19,7 @@ const zapCommandStyle = theme => ({
     },
     zapContainer:{
         width:'588px',
-        backgroundColor:'#2C3040',
+        backgroundColor:'rgba(44,48,64,.6)',
         borderRadius:'24px',
         padding:'24px',
         
@@ -63,7 +63,7 @@ const zapCommandStyle = theme => ({
     },
     boxContainerInside:{
         borderRadius: '12px',
-        background: '#635AFF',
+        background: '#4169e1',
         borderRadius: '24px',
     },
     endAdornment:{
@@ -129,14 +129,14 @@ const zapCommandStyle = theme => ({
         opacity: '1',
         width:'48px',
         height:'24px',
-        backgroundColor: '#635AFF',
+        backgroundColor: '#4169e1',
         borderRadius: '24px',
         fontSize: '12px',
         lineHeight: '12px',
         padding:'12px 24px',
         marginRight:'8px',
         "&:hover,&:focus": {
-            backgroundColor: "#635AFF",
+            backgroundColor: "#4169e1",
         }
     }
 })

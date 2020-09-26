@@ -8,10 +8,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     depositedBalanceSliderRoot:{
-        color:'#FF2D82',
+        color:'#4169e1',
     },
     depositedBalanceSliderMarkLabel:{
-        color:'#FF2D82',
+        color:'#4169e1',
     },
     depositedBalanceSliderRail:{
         opacity:'1',

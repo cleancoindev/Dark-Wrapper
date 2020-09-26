@@ -42,7 +42,7 @@ export default function HomePage() {
   
   return (
     <>
-      <SnackbarContent
+      {/* <SnackbarContent
         message={
             <span onClick={() => window.open(t('Home-SnackBarUrl'))} style={{fontWeight: "bold"}}>
               {t('Home-SnackBarText')}
@@ -50,10 +50,10 @@ export default function HomePage() {
         }
         close
         color="success"
-      />
+      /> */}
       <SectionPools fromPage='home'/>
       <StakePage fromPage='home'/>
-      <Dialog
+      {/* <Dialog
         classes={{
           root: classes.modalRoot,
           paper: classes.modal
@@ -81,7 +81,7 @@ export default function HomePage() {
             Close
           </Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 }

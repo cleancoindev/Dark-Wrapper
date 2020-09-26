@@ -55,18 +55,19 @@ const hexToRgb = input => {
 const drawerWidth = 260;
 
 const primaryColor = [
-  "#ff2d82",
+  "#4169e1",
   "#9c27b0",
   "#ab47bc",
   "#8e24aa",
   "#af2cc5",
   "#e1bee7",
-  "#ba68c8"
+  "#ba68c8",
+  '#FF2D82'
 ];
 
 
 const hoverColor = [
-  "#ff5b9e",
+  "#FF2D82",
   "#404456"
 ];
 

@@ -20,9 +20,9 @@ const secondStyle = {
   lineHeight: '14px',
 };
 
-const normalBackgroundColor = '#2C3040';
-const primaryColor = '#FF2D82';
-const secondColor = '#635AFF';
+const normalBackgroundColor = 'rgba(44,48,64,.6)';
+const primaryColor = '#4169e1';
+const secondColor = '#4169e1';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {

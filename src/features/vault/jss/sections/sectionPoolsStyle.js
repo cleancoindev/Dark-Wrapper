@@ -179,14 +179,14 @@ const sectionPoolsStyle = theme => ({
       }
   },
     accordion:{
-        backgroundColor:'#2C3040',
+        backgroundColor:'rgba(44,48,64,.6)',
         color:'#fff',
         boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 0.06)',
         borderRadius: '8px',
     },
     details:{
       // padding: '12px 0',
-      background: '#2C3040',
+      background: 'rgba(44,48,64,.6)',
       boxShadow: '0 4px 8px 0 rgba(0,0,0,0.06)',
       borderRadius: '8px',
     },
@@ -218,10 +218,10 @@ const sectionPoolsStyle = theme => ({
         color:'#FF2D82',
     },
     drawSliderRoot:{
-        color:'#635AFF',
+        color:'#FF2D82',
     },
     drawSliderMarkLabel:{
-        color:'#635AFF',
+        color:'#FF2D82',
     },
     showDetailLeft:{
         float: 'left',

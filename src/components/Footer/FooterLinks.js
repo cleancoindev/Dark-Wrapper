@@ -42,14 +42,14 @@ import {
 const useStyles = makeStyles(styles);
 
 const footerLinkArr = [
-    {content:'Token Contract',href:'https://etherscan.io/address/0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83'},
+    {content:'Token Contract',href:'https://etherscan.io/address/0x3108ccfd96816f9e663baa0e8c5951d229e8c6da'},
     // {content:'CoinMarketCap',href:'https://coinmarketcap.com/zh/currencies/yearn-finance-ii/'},
     // {content:'CoinGecko',href:'https://www.coingecko.com/en/coins/dfi-money'},
-    {content:'Forum',href:'https://gov.dfi.money/'},
-    {content:'Stats',href:'https://stats.dfi.money/'},
-    {content:'Voting',href:'https://snapshot.page/#/dfi'},
-    {content:'Documentation',href:'https://docs.yfii.finance/'},
-    {content:'Uniswap ETH-YFII',href:'https://app.uniswap.org/#/swap?outputCurrency=0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83'},
+    // {content:'Forum',href:'https://gov.dfi.money/'},
+    // {content:'Stats',href:'https://stats.dfi.money/'},
+    // {content:'Voting',href:'https://snapshot.page/#/dfi'},
+    {content:'Documentation',href:'https://medium.com/@darkswap/darkswap-7bf717646aa0'},
+    {content:'Uniswap DARK-ETH',href:'https://app.uniswap.org/#/swap?inputCurrency=0x3108ccfd96816f9e663baa0e8c5951d229e8c6da'},
 ];
 
 export default function FooterLinks(props) {
@@ -77,10 +77,10 @@ export default function FooterLinks(props) {
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        fontSize: "1.25rem",
+        // fontSize: "1.25rem",
         borderRadius: "1.25rem",
         color:'white',
-        backgroundColor:primaryColor[0],
+        // backgroundColor:primaryColor[0],
     }
 
     const iconColorStyle={
@@ -97,7 +97,7 @@ export default function FooterLinks(props) {
                     className={
                         classes.navLink + " " + classes.socialIconsButton
                     }
-                    href="https://twitter.com/DfiMoney"
+                    href="https://twitter.com/Darkswap1"
                     target="_blank"
                     >
                     <i
@@ -108,30 +108,14 @@ export default function FooterLinks(props) {
                     />
                     </Button>
                 </ListItem>
+                
                 <ListItem className={classes.listItem}>
                     <Button
                     color={color}
                     className={
                         classes.navLink + " " + classes.socialIconsButton
                     }
-                    href="https://t.me/yfiifinance"
-                    target="_blank"
-                    >
-                    <i
-                        style={iconColorStyle}
-                        className={
-                        "yfiiicon yfii-telegram"
-                        }
-                    />
-                    </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                    <Button
-                    color={color}
-                    className={
-                        classes.navLink + " " + classes.socialIconsButton
-                    }
-                    href="https://discord.gg/XQ4wnmz"
+                    href="https://discord.com/invite/GS3c5D8"
                     target="_blank"
                     >
                     <i
@@ -148,7 +132,7 @@ export default function FooterLinks(props) {
                     className={
                         classes.navLink + " " + classes.socialIconsButton
                     }
-                    href="https://github.com/yfii"
+                    href="https://github.com/Ladarken/dVault"
                     target="_blank"
                     >
                     <i
@@ -158,47 +142,7 @@ export default function FooterLinks(props) {
                         }
                     />
                     </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                    <Button
-                    color={color}
-                    className={
-                        classes.navLink + " " + classes.socialIconsButton
-                    }
-                    aria-owns={open ? 'mouse-over-popover' : undefined}
-                    aria-haspopup="true"
-                    onMouseEnter={handlePopoverOpen}
-                    onMouseLeave={handlePopoverClose}
-                    >
-                    <i
-                        style={iconColorStyle}
-                        className={
-                        "yfiiicon yfii-wechat"
-                        }
-                    />
-                    </Button>
-                    <Popover
-                    id="mouse-over-popover"
-                    className={classes.popover}
-                    classes={{
-                        paper: classes.paper,
-                    }}
-                    open={open}
-                    anchorEl={anchorEl}
-                    anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'left',
-                    }}
-                    transformOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    onClose={handlePopoverClose}
-                    disableRestoreFocus
-                    >
-                    <Avatar variant="square" alt="YFII" src={require(`../../images/wechat.png`)} style={{width: "80px", height: "80px"}}/>
-                    </Popover>
-                </ListItem>
+                </ListItem>                
             </List>
             <GridContainer className={classes.linkList} justify='center' align='center' >
                 {

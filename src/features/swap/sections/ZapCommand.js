@@ -251,7 +251,7 @@ export default function ZapCommand() {
                         width:'100%',
                         height:'64px',
                         borderRadius:'32px',
-                        backgroundColor:'#FF2D82',
+                        backgroundColor:'#4169e1',
                         color:'#FFF',
                         boxShadow:'0 2px 2px 0 rgba(53, 56, 72, 0.14), 0 3px 1px -2px rgba(53, 56, 72, 0.2), 0 1px 5px 0 rgba(53, 56, 72, 0.12)',
                         fontWeight: "550",
