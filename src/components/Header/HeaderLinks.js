@@ -30,7 +30,7 @@ const useStyles = makeStyles(styles);
 const tabArr = [
   {value:'',label:'Home'},
   // {value:'vault',label:'Vault'},
-  // {value:'stake',label:'Stake'},
+  {value:'stake',label:'Stake'},
 ]
 
 export default function HeaderLinks(props) {

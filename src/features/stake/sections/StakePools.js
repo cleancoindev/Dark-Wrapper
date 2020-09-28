@@ -28,7 +28,7 @@ export default function StakePools(props) {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
   const { pools, poolsInfo, fetchPoolsInfo } = useFetchPoolsInfo();
-
+  console.log(pools)
   useEffect(() => {
     fetchPoolsInfo();
   }, [fetchPoolsInfo]);
@@ -39,7 +39,7 @@ export default function StakePools(props) {
         <div className={classes.mainTitle}>{t('Stake-Main-Title')}</div>
         <h3 className={classes.secondTitle}>{t('Stake-Second-Title')}</h3>
       </Grid>
-      {
+      {/* {
         fromPage == 'page' && 
         <Hidden xsDown>
           <GridItem>
@@ -65,7 +65,7 @@ export default function StakePools(props) {
             </div>
           </GridItem>
         </Hidden>
-      }
+      } */}
       <Hidden xsDown>
         <GridItem>
           <Table className={classes.table} aria-label="customized table">

@@ -13,10 +13,10 @@ import tooltips from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 import { rgbToHex } from "@material-ui/core";
 
 const secondStyle = {
-  opacity: '0.4',
+  opacity: '0.8',
   fontFamily: 'Helvetica',
   fontSize: '14px',
-  color: '#FFFFFF',
+  color: '#444',
   letterSpacing: '0',
   lineHeight: '14px',
 };
@@ -25,7 +25,7 @@ const sectionPoolsStyle = theme => ({
   mainTitle:{
     fontFamily: 'Helvetica',
     fontSize: '32px',
-    color: '#FFFFFF',
+    color: '#333',
     letterSpacing: '0',
     lineHeight: '32px',
     fontWeight: "550",

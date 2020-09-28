@@ -12,10 +12,10 @@ const fontDefaultStyle = {
 };
 
 const secondStyle = {
-  opacity: '0.4',
+  opacity: '0.8',
   fontFamily: 'Helvetica',
   fontSize: '14px',
-  color: '#FFFFFF',
+  color: '#FF2D82',
   letterSpacing: '0',
   lineHeight: '14px',
 };
@@ -68,7 +68,7 @@ const stakePoolsStyle = theme => ({
   mainTitle:{
     fontFamily: 'Helvetica',
     fontSize: '32px',
-    color: '#FFFFFF',
+    color: '#FF2D82',
     letterSpacing: '0',
     lineHeight: '32px',
     fontWeight: "550",

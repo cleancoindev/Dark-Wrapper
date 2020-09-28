@@ -53,6 +53,7 @@ export function useFetchPoolsInfo() {
       fetchPoolsInfoPending: state.stake.fetchPoolsInfoPending,
     }),
     shallowEqual,
+    
   );
 
   const boundAction = useCallback(() => dispatch(fetchPoolsInfo()), [dispatch]);
