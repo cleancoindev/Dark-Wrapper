@@ -1904,9 +1904,9 @@
     react-is "^16.8.0"
 
 "@metamask/detect-provider@^1.1.0":
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/@metamask/detect-provider/download/@metamask/detect-provider-1.0.1.tgz#494f701a48a8b2d032a5178f243b925fe14c1d2d"
-  integrity sha1-SU9wGkiostAypRePJDuSX+FMHS0=
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/@metamask/detect-provider/download/@metamask/detect-provider-1.1.0.tgz#3200883de5d739bd0f7edfd1c9bb2bd01011ea49"
+  integrity sha1-MgCIPeXXOb0Pft/Rybsr0BAR6kk=
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

@@ -38,11 +38,11 @@ const pools = [
 		name: 'DARK-ETH',
 		token: 'dark',
 		tokenDecimals: 18,
-		tokenAddress: '0x3108ccfd96816f9e663baa0e8c5951d229e8c6da',
-		earnedToken: 'iUSDT',
-		earnedTokenDecimals: 6,
-		earnedTokenAddress: '0x72Cf258c852Dc485a853370171d46B9D29fD3184',
-		earnContractAddress: '0x3d367c9529f260b0661e1c1e91167c9319ee96ca',
+		tokenAddress: '0x5cBEfe14c66ba706e79CA4237fF10F218461014A',
+		earnedToken: 'DARK',
+		earnedTokenDecimals: 18,
+		earnedTokenAddress: '0x3108ccFd96816F9E663baA0E8c5951D229E8C6da',
+		earnContractAddress: '0x4332b546635Ef22F71bD354c1EFd238c2602Dd8d',
 		earnContractAbi: pool4Abi
 	},
 ];
