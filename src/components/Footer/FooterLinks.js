@@ -97,7 +97,7 @@ export default function FooterLinks(props) {
                     className={
                         classes.navLink + " " + classes.socialIconsButton
                     }
-                    href="https://twitter.com/Darkswap1"
+                    href="https://twitter.com/DarkBuild1"
                     target="_blank"
                     >
                     <i
