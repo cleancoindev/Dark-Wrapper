@@ -28,7 +28,6 @@ export default function StakePools(props) {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
   const { pools, poolsInfo, fetchPoolsInfo } = useFetchPoolsInfo();
-  console.log(pools)
   useEffect(() => {
     fetchPoolsInfo();
   }, [fetchPoolsInfo]);

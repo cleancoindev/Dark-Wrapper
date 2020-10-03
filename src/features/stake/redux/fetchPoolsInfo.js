@@ -6,7 +6,7 @@ import {
   STAKE_FETCH_POOLS_INFO_SUCCESS,
   STAKE_FETCH_POOLS_INFO_FAILURE,
 } from './constants';
-
+import {pools_config} from 'common/common.js'
 export function fetchPoolsInfo() {
   return (dispatch, getState) => {
     // optionally you can have getState as the second argument
@@ -20,22 +20,28 @@ export function fetchPoolsInfo() {
       // doRequest is a placeholder Promise. You should replace it with your own logic.
       // See the real-word example at:  https://github.com/supnate/rekit/blob/master/src/features/home/redux/fetchRedditReactjsList.js
       // args.error here is only for test coverage purpose.
-      const doRequest = axios.get('https://api1.dfi.money/stake/pools/');
+      // const doRequest = axios.get('https://api1.dfi.money/stake/pools/');
 
-      doRequest.then(
-        res => {
-          dispatch({
-            type: STAKE_FETCH_POOLS_INFO_SUCCESS,
-            data: res.data.data,
-          });
-          resolve(res);
-        },
-        // Use rejectHandler as the second argument so that render errors won't be caught.
-        err => {
-          dispatch({ type: STAKE_FETCH_POOLS_INFO_FAILURE });
-          reject(err);
-        },
-      );
+      // doRequest.then(
+      //   res => {
+          // dispatch({
+          //   type: STAKE_FETCH_POOLS_INFO_SUCCESS,
+          //   data: res.data.data,
+          // });
+          // resolve(res);
+      //   },
+      //   // Use rejectHandler as the second argument so that render errors won't be caught.
+      //   err => {
+      //     dispatch({ type: STAKE_FETCH_POOLS_INFO_FAILURE });
+      //     reject(err);
+      //   },
+      // );
+      const res = pools_config
+      dispatch({
+        type: STAKE_FETCH_POOLS_INFO_SUCCESS,
+        data: res,
+      });
+      resolve(res);
     });
     return promise;
   };
@@ -67,6 +73,8 @@ export function useFetchPoolsInfo() {
 }
 
 export function reducer(state, action) {
+  console.log('pools--------')
+  console.log(state)
   switch (action.type) {
     case STAKE_FETCH_POOLS_INFO_BEGIN:
       // Just after a request is sent
