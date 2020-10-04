@@ -344,7 +344,7 @@ export default function SectionPools() {
 
                             <Grid item >
                                 <Grid item container justify="flex-end" alignItems="center" spacing={2}>
-                                    <Hidden mdDown>
+                                    {/* <Hidden mdDown>
                                         <Grid item>
                                         <IconButton
                                             classes={{
@@ -361,7 +361,7 @@ export default function SectionPools() {
                                             <i className={"yfiiicon yfii-help-circle"} />
                                         </IconButton>
                                         </Grid>
-                                    </Hidden>
+                                    </Hidden> */}
                                     <Grid item>
                                     <IconButton
                                         className={classes.iconContainerPrimary}

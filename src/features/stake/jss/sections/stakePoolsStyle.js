@@ -179,7 +179,7 @@ const stakePoolsStyle = theme => ({
   detailTitle:{
     fontFamily: 'Helvetica',
     fontSize: '32px',
-    color: '#FFFFFF',
+    color: '#333',
     letterSpacing: '0',
     lineHeight: '32px',
     fontWeight: "550",
