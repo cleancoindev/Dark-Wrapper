@@ -28,8 +28,6 @@ export function fetchContractApy() {
 
       // doRequest.then(
       //   res => {
-      //     console.log('res----')
-      //     console.log(res)
       //     dispatch({
       //       type: VAULT_FETCH_CONTRACT_APY_SUCCESS,
       //       data: res.data,
@@ -85,8 +83,6 @@ export function useFetchContractApy() {
 }
 
 export function reducer(state, action) {
-  console.log('contract--------')
-  console.log(state)
   switch (action.type) {
     case VAULT_FETCH_CONTRACT_APY_BEGIN:
       // Just after a request is sent

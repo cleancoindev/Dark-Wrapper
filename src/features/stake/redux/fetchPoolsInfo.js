@@ -73,8 +73,6 @@ export function useFetchPoolsInfo() {
 }
 
 export function reducer(state, action) {
-  console.log('pools--------')
-  console.log(state)
   switch (action.type) {
     case STAKE_FETCH_POOLS_INFO_BEGIN:
       // Just after a request is sent
