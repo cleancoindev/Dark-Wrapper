@@ -156,7 +156,7 @@ const sectionPoolsStyle = theme => ({
       height:'48px',
       backgroundColor:'#353848',
       borderRadius:'8px',
-      color:primaryColor[0],
+      color:'#FF2D82',
       
       "& i": {
         fontSize: '24px',
@@ -165,6 +165,11 @@ const sectionPoolsStyle = theme => ({
         backgroundColor: hoverColor[1],
       }
   },
+  iconContainerPrepare: {
+    width:'48px',
+    height:'48px',
+    borderRadius:'8px',
+},
   iconContainerPrimary: {
       width:'48px',
       height:'48px',

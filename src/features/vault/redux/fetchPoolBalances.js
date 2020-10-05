@@ -118,8 +118,6 @@ export function useFetchPoolBalances() {
 }
 
 export function reducer(state, action) {
-  console.log('balance---')
-  console.log(state)
   switch (action.type) {
     case VAULT_FETCH_POOL_BALANCES_BEGIN:
       // Just after a request is sent

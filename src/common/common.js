@@ -14,6 +14,7 @@ export const contract_config = {
     usdt: "12.00%",
     wbtc: "4.00%",
     weth: "5.00%",
-    ycrv: "10.00%"
+    ycrv: "10.00%",
+    ri:"5.00%"
 }
 
