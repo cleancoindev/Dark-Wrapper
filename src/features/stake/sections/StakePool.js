@@ -295,7 +295,7 @@ export default function StakePool(props) {
                           setShowInput(false);
                         }}
                       >
-                        <i className="fa fa-times"/>
+                        X
                       </IconButton>
                     </Hidden>
                   </div>
