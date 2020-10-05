@@ -297,7 +297,7 @@ export default function SectionPools() {
                         </Grid>
                         <Grid item style={{ minWidth: '100px' }}>
                           <Typography className={classes.iconContainerMainTitle} variant="body2" gutterBottom>
-                            {pool.token}
+                            {pool.name}
                             <Hidden smUp>
                               <i
                                 style={{ color: primaryColor[0], marginLeft: '4px' }}
@@ -344,7 +344,7 @@ export default function SectionPools() {
 
                     <Grid item >
                       <Grid item container justify="flex-end" alignItems="center" spacing={2}>
-                        {pool.token === "DarkRIForge" ? (
+                        {pool.token === "RI" ? (
                           <Grid item>
                             <IconButton
                               classes={{
@@ -372,7 +372,7 @@ export default function SectionPools() {
                         <Grid item>
                           <IconButton
                             className={classes.iconContainerPrimary}
-                            disabled={pool.token == "DarkRIForge"}
+                            disabled={pool.token == "RI"}
                             onClick={(event) => {
                               event.stopPropagation();
                               openCard(index);
