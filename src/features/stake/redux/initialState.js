@@ -41,7 +41,7 @@ const pools = [
 		tokenAddress: '0x5cBEfe14c66ba706e79CA4237fF10F218461014A',
 		earnedToken: 'DARK',
 		earnedTokenDecimals: 18,
-		earnedTokenAddress: '0x3108ccFd96816F9E663baA0E8c5951D229E8C6da',
+		earnedTokenAddress: '0x4332b546635Ef22F71bD354c1EFd238c2602Dd8d',
 		earnContractAddress: '0x4332b546635Ef22F71bD354c1EFd238c2602Dd8d',
 		earnContractAbi: pool4Abi
 	},

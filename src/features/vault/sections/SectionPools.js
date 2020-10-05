@@ -202,6 +202,7 @@ export default function SectionPools() {
   }
 
   const openCard = id => {
+    if(id == 7){return}
     return setOpenCardList(
       openedCardList => {
         if (openedCardList.includes(id)) {
@@ -343,7 +344,7 @@ export default function SectionPools() {
 
                     <Grid item >
                       <Grid item container justify="flex-end" alignItems="center" spacing={2}>
-                        {pool.token === "RI" ? (
+                        {pool.token === "DarkRIForge" ? (
                           <Grid item>
                             <IconButton
                               classes={{
@@ -371,6 +372,7 @@ export default function SectionPools() {
                         <Grid item>
                           <IconButton
                             className={classes.iconContainerPrimary}
+                            disabled={pool.token == "DarkRIForge"}
                             onClick={(event) => {
                               event.stopPropagation();
                               openCard(index);

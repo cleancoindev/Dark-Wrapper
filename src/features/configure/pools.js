@@ -25,22 +25,7 @@ export const pools = [
     pricePerFullShare: 1,
     pastPricePerFullShare: 1
   },
-  {
-    id: 'ri',
-    name: 'RI',  
-    token: 'RI',
-    tokenDescription: 'RI',
-    tokenAddress: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-    tokenDecimals: 18,
-    tokenDescriptionUrl: '',
-    tokenDescriptionUrl2: '',
-    earnedToken: 'darkRI',
-    earnedTokenAddress: '0x3eFb017Ecb43f720cfBd967B44cC764b1eb42ff0',
-    earnContractAddress: '0x3eFb017Ecb43f720cfBd967B44cC764b1eb42ff0',
-    defaultApy: "39.54",
-    pricePerFullShare: 1,
-    pastPricePerFullShare: 1
-  },
+
   {
     id: 'usdt',
     name: 'USDT',  
@@ -120,23 +105,23 @@ export const pools = [
     pricePerFullShare: 1,
     pastPricePerFullShare: 1
   },
+  // {
+  //   id: 'tusd',
+  //   name: 'TUSD',  
+  //   token: 'TUSD',
+  //   tokenDescription: 'TUSD',
+  //   tokenAddress: '0x0000000000085d4780B73119b644AE5ecd22b376',
+  //   tokenDecimals: 18,
+  //   tokenDescriptionUrl: '',
+  //   tokenDescriptionUrl2: '',
+  //   earnedToken: 'darkTUSD',
+  //   earnedTokenAddress: '0x8bF187dC70376133024ee2b9Aa205910aa5bffe6',
+  //   earnContractAddress: '0x8bF187dC70376133024ee2b9Aa205910aa5bffe6',
+  //   defaultApy: "42.63",
+  //   pricePerFullShare: 1,
+  //   pastPricePerFullShare: 1
+  // },
   {
-    id: 'tusd',
-    name: 'TUSD',  
-    token: 'TUSD',
-    tokenDescription: 'TUSD',
-    tokenAddress: '0x0000000000085d4780B73119b644AE5ecd22b376',
-    tokenDecimals: 18,
-    tokenDescriptionUrl: '',
-    tokenDescriptionUrl2: '',
-    earnedToken: 'darkTUSD',
-    earnedTokenAddress: '0x8bF187dC70376133024ee2b9Aa205910aa5bffe6',
-    earnContractAddress: '0x8bF187dC70376133024ee2b9Aa205910aa5bffe6',
-    defaultApy: "42.63",
-    pricePerFullShare: 1,
-    pastPricePerFullShare: 1
-  }
-  ,{
     id: 'ycrv',
     name: 'yCRV',  
     token: 'yCRV',
@@ -149,6 +134,22 @@ export const pools = [
     earnedTokenAddress: '0xB2db4568a3a2f5CaAd850Cf0Ad0A6C3d0d82A6F0',
     earnContractAddress: '0xB2db4568a3a2f5CaAd850Cf0Ad0A6C3d0d82A6F0',
     defaultApy: "42.63",
+    pricePerFullShare: 1,
+    pastPricePerFullShare: 1
+  },
+  {
+    id: 'ri',
+    name: 'DarkRIForge',  
+    token: 'DarkRIForge',
+    tokenDescription: 'Coming Soon',
+    tokenAddress: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    tokenDecimals: 18,
+    tokenDescriptionUrl: '',
+    tokenDescriptionUrl2: '',
+    earnedToken: 'darkRI',
+    earnedTokenAddress: '0x3eFb017Ecb43f720cfBd967B44cC764b1eb42ff0',
+    earnContractAddress: '0x3eFb017Ecb43f720cfBd967B44cC764b1eb42ff0',
+    defaultApy: "39.54",
     pricePerFullShare: 1,
     pastPricePerFullShare: 1
   },
