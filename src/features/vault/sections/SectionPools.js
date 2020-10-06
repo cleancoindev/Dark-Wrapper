@@ -312,7 +312,7 @@ export default function SectionPools() {
                             </Hidden>
                           </Typography>
                           <Typography className={classes.iconContainerSubTitle} variant="body2">{pool.tokenDescription}</Typography>
-                          {pool.token === "RI" ? (<Typography className={classes.iconContainerSubTitle} variant="body2">(require 100DARK)</Typography>):''}
+                          {pool.token === "RI" ? (<Typography className={classes.iconContainerSubTitle} variant="body2">(require 100 DARK)</Typography>):''}
                         </Grid>
                       </Grid>
                     </Grid>
