@@ -202,7 +202,7 @@ export default function SectionPools() {
   }
 
   const openCard = id => {
-    if(id == 7){return}
+    if (id == 7) { return }
     return setOpenCardList(
       openedCardList => {
         if (openedCardList.includes(id)) {
@@ -347,10 +347,11 @@ export default function SectionPools() {
                         {pool.token === "RI" ? (
                           <Grid item>
                             <IconButton
-                              classes={{
-                                root: classes.iconContainerSecond
-                              }}
-                              // className={classes.iconContainerSecond}
+                              // classes={{
+                              //   root: classes.iconContainerSecond
+                              // }}
+                              disabled
+                              className={classes.iconContainerPrepare}
                               onClick={
                                 event => {
                                   event.stopPropagation();
@@ -358,17 +359,18 @@ export default function SectionPools() {
                                 }
                               }
                             >
-                              <i className={"yfiiicon yfii-help-circle"} />
+                              {/* <i className={"yfiiicon yfii-help-circle"} /> */}
                             </IconButton>
                           </Grid>
                         ) :
                           <Grid item>
                             <IconButton
+                              disabled
                               className={classes.iconContainerPrepare}
-                            >                            
+                            >
                             </IconButton>
                           </Grid>
-                          }
+                        }
                         <Grid item>
                           <IconButton
                             className={classes.iconContainerPrimary}
@@ -528,7 +530,6 @@ export default function SectionPools() {
                         </Button>
                       </div>
                     </Grid>
-
                   </Grid>
                 </AccordionDetails>
               </Accordion>
@@ -536,7 +537,7 @@ export default function SectionPools() {
           </Grid>
         )
       })}
-
+      <h3 className={classes.endTips}>TIPS:APY is not an accurate indicator for vault strategy performance. DARK will use Growth % to show performance of vault strategies from a specific time in the past to the current date</h3>
     </Grid>
   )
 }

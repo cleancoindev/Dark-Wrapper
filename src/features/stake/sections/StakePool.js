@@ -351,7 +351,8 @@ export default function StakePool(props) {
                 </GridItem>
                 <GridItem md={3} sm={6} xs={12} className={classes.flexCenter}>
                   <CustomButtons
-                    disabled={!Boolean(withdrawAble)}
+                    // disabled={!Boolean(withdrawAble)}
+                    disabled={!Boolean(claimAble)}
                     onClick={(event)=>{
                       event.stopPropagation();
                       setShowInput('unstake');
@@ -378,7 +379,8 @@ export default function StakePool(props) {
                 </GridItem>
                 <GridItem md={3} sm={6} xs={12} className={classes.flexCenter}>
                   <CustomButtons
-                    disabled={!Boolean(exitAble)}
+                    // disabled={!Boolean(exitAble)}
+                    disabled={!Boolean(claimAble)}
                     onClick={onExit}
                     style={{width:'300px',height:'44px',marginBottom:'14px',marginRight:'0'}}
                     className={classNames({

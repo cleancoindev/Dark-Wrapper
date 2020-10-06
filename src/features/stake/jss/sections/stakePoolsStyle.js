@@ -232,7 +232,7 @@ const stakePoolsStyle = theme => ({
   contentItemTitleVal:{
     ...fontDefaultStyle,
     fontSize: '28px',
-    color: primaryColor,
+    color: '#ff9815',
     lineHeight: '28px',
     marginBottom:'12px',
     textTransform:'uppercase',
