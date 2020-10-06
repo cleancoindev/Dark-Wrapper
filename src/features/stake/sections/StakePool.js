@@ -360,7 +360,8 @@ export default function StakePool(props) {
                     style={{width:'300px',height:'44px',marginBottom:'14px',marginRight:'0'}}
                     className={classNames({
                       [classes.stakeButton]:true,
-                      [classes.grayButton]:true,
+                      // [classes.grayButton]:true,
+                      [classes.rewardsButton]:true,
                     })}>
                     {t('Stake-Button-Unstake-Tokens')}
                   </CustomButtons>
@@ -385,7 +386,8 @@ export default function StakePool(props) {
                     style={{width:'300px',height:'44px',marginBottom:'14px',marginRight:'0'}}
                     className={classNames({
                       [classes.stakeButton]:true,
-                      [classes.grayButton]:true,
+                      // [classes.grayButton]:true,
+                      [classes.rewardsButton]:true,
                     })}>
                     {t('Stake-Button-Exit')}
                   </CustomButtons>

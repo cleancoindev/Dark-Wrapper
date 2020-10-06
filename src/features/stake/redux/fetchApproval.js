@@ -44,7 +44,7 @@ export function fetchApproval(index) {
         .on('receipt', function(receipt){
           dispatch(enqueueSnackbar({
             key: new Date().getTime() + Math.random(),
-            message: '交易确认',
+            message: 'success',
             options: {
               variant: 'success',
             },
