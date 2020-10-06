@@ -393,7 +393,7 @@ export default function SectionPools() {
                   <Grid container style={{ width: "100%", marginLeft: 0, marginRight: 0 }}>
                     <Grid item xs={12} sm={6} className={classes.sliderDetailContainer}>
                       <div className={classes.showDetailRight}>
-                        {t('Vault-Balance')}:{balanceSingle.toFormat(4)} {pool.token}
+                        {t('Vault-Balance')}:{balanceSingle.toFormat(18)} {pool.token}
                       </div>
                       <FormControl fullWidth variant="outlined">
                         <CustomOutlinedInput
@@ -475,7 +475,7 @@ export default function SectionPools() {
 
                     <Grid item xs={12} sm={6} className={classes.sliderDetailContainer}>
                       <div className={classes.showDetailRight}>
-                        {singleDepositedBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)).toFormat(4)} {pool.token} ({singleDepositedBalance.toFormat(4)} {pool.earnedToken})
+                        {singleDepositedBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)).toFormat(18)} {pool.token} ({singleDepositedBalance.toFormat(18)} {pool.earnedToken})
                             </div>
                       <FormControl fullWidth variant="outlined">
                         <CustomOutlinedInput
