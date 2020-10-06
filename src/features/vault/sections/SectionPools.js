@@ -312,7 +312,7 @@ export default function SectionPools() {
                             </Hidden>
                           </Typography>
                           <Typography className={classes.iconContainerSubTitle} variant="body2">{pool.tokenDescription}</Typography>
-                          {pool.token === "RI" ? (<Typography className={classes.iconContainerSubTitle} variant="body2">(require 100 DARK)</Typography>):''}
+                          {pool.token === "RI" ? (<Typography className={classes.iconContainerSubTitle} variant="body2">(require 100 DARK)</Typography>) : ''}
                         </Grid>
                       </Grid>
                     </Grid>
@@ -334,12 +334,13 @@ export default function SectionPools() {
                             </Grid>
                           </Grid>
                         </Hidden>
-                        <Grid item xs={12} md={1} container justify='center' alignItems="center">
-                          <Grid item>
-                            <Typography className={classes.iconContainerMainTitle} variant="body2" gutterBottom noWrap> {depositedApy}</Typography>
-                            <Typography className={classes.iconContainerSubTitle} variant="body2">{t('Vault-ListAPY')}</Typography>
-                          </Grid>
-                        </Grid>
+                        {pool.token === "RI" ? '' : (
+                          <Grid item xs={12} md={1} container justify='center' alignItems="center">
+                            <Grid item>
+                              <Typography className={classes.iconContainerMainTitle} variant="body2" gutterBottom noWrap> {depositedApy}</Typography>
+                              <Typography className={classes.iconContainerSubTitle} variant="body2">{t('Vault-ListAPY')}</Typography>
+                            </Grid>
+                          </Grid>)}
                       </Grid>
                     </Grid>
 

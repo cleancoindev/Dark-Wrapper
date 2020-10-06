@@ -94,7 +94,7 @@ export default function StakePools(props) {
                           />
                       </div>
                       <div className={classes.firstCellContent}>
-                        <div>{pool.name}</div>
+                        <div>{pool.name} LP</div>
                         <div>{pool.token}</div>
                       </div>
                     </div>

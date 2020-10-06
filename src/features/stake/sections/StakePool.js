@@ -184,7 +184,7 @@ export default function StakePool(props) {
   return (
     <Grid container style={{paddingTop: '4px'}}>
       <Grid item xs={12}>
-        <div className={classes.detailTitle}>{`Stake / ${pools[index].name}`}</div>
+        <div className={classes.detailTitle}>{`Stake / ${pools[index].name} LP`}</div>
       </Grid>
       <Grid item xs={12} className={classes.detailContentUp}>
         <GridContainer spacing={3} className={classNames({
@@ -198,7 +198,7 @@ export default function StakePool(props) {
               <Hidden smUp>
                 <Typography variant="body2" gutterBottom className={classes.contentItemTitle}>{t('Stake-Balancer-Your-Balance')}</Typography>
               </Hidden>
-              <div className={classes.contentItemTitleVal}>{`${Math.floor(myBalance.toNumber() * 10000)/ 10000} ${pools[index].name}`}</div>
+              <div className={classes.contentItemTitleVal}>{`${Math.floor(myBalance.toNumber() * 10000)/ 10000} ${pools[index].name} LP`}</div>
               <Hidden xsDown>
                 <div className={classes.contentItemTitle}>{t('Stake-Balancer-Your-Balance')}</div>
               </Hidden>
@@ -210,7 +210,7 @@ export default function StakePool(props) {
             <Hidden smUp>
               <Typography variant="body2" gutterBottom className={classes.contentItemTitle}>{t('Stake-Balancer-Current-Staked')}</Typography>
             </Hidden>
-            <div className={classes.contentItemTitleVal}>{`${Math.floor(myCurrentlyStaked.toNumber() * 10000)/ 10000} ${pools[index].name}`}</div>
+            <div className={classes.contentItemTitleVal}>{`${Math.floor(myCurrentlyStaked.toNumber() * 10000)/ 10000} ${pools[index].name} LP`}</div>
             <Hidden xsDown>
               <div className={classes.contentItemTitle}>{t('Stake-Balancer-Current-Staked')}</div>
             </Hidden>
