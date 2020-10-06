@@ -147,7 +147,7 @@ export const pools = [
     tokenDescriptionUrl: '',
     tokenDescriptionUrl2: '',
     earnedToken: 'darkRI',
-    earnedTokenAddress: '0x37e808f084101f75783612407e7c3f5f92d8ee3f',
+    earnedTokenAddress: '0x0000000000000000000000000000000000000000',
     earnContractAddress: '0x37e808f084101f75783612407e7c3f5f92d8ee3f',
     defaultApy: "39.54",
     pricePerFullShare: 1,
