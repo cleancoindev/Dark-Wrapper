@@ -18,6 +18,10 @@ import Button from "components/CustomButtons/Button.js";
 // hooks
 import { useTranslation } from 'react-i18next';
 
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+
 import styles from "assets/jss/material-kit-pro-react/components/headerLinksStyle.js";
 const useStyles = makeStyles(styles);
 
@@ -28,12 +32,21 @@ const useStyles = makeStyles(styles);
 </Tabs> */}
 
 const tabArr = [
-  {value:'',label:'Home'},
+  { value: '', label: 'Home' },
   // {value:'vault',label:'Vault'},
-  {value:'stake',label:'Stake'},
+  { value: 'stake', label: 'Stake' },
 ]
 
 export default function HeaderLinks(props) {
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+  });
+  const handleChange = (event) => {
+    console.log(event.target.checked);
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
   let history = useHistory();
   const { dropdownHoverColor, connected, address, connectWallet, disconnectWallet } = props;
   const classes = useStyles();
@@ -44,7 +57,7 @@ export default function HeaderLinks(props) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
-    if(!connected) return;
+    if (!connected) return;
     const canvas = canvasRef.current
     renderIcon({ seed: address.toLowerCase() }, canvas)
     const updatedDataUrl = canvas.toDataURL()
@@ -55,80 +68,80 @@ export default function HeaderLinks(props) {
       setShortAddress(address)
     } else {
       setShortAddress(`${address.slice(0, 6)}...${address.slice(-4)}`)
-    }  
+    }
   }, [dataUrl, address])
 
-  const switchLanguage = () => {
-    switch(i18n.language) {
-      case 'zh':
-      case 'zh-CN':
-        return '中文'
-      case 'en':
-        return 'English'
-      case 'ja':
-        return '日本語'
-      case 'th':
-        return 'ไทย'
-      case 'ko':
-        return '한글'
-      default:
-        return '中文'
-    }
-  }
+  // const switchLanguage = () => {
+  //   switch (i18n.language) {
+  //     case 'zh':
+  //     case 'zh-CN':
+  //       return '中文'
+  //     case 'en':
+  //       return 'English'
+  //     case 'ja':
+  //       return '日本語'
+  //     case 'th':
+  //       return 'ไทย'
+  //     case 'ko':
+  //       return '한글'
+  //     default:
+  //       return '中文'
+  //   }
+  // }
 
-  const handleClick = event => {
-    console.log(event)
-    switch(event) {
-      case 'English':
-        return i18n.changeLanguage('en').then(()=>setLanguage(event))
-      case '中文':
-        return i18n.changeLanguage('zh').then(()=>setLanguage(event))
-      case '日本語':
-        return i18n.changeLanguage('ja').then(()=>setLanguage(event))
-      case 'ไทย':
-        return i18n.changeLanguage('th').then(()=>setLanguage(event))
-      case '한글':
-        return i18n.changeLanguage('ko').then(()=>setLanguage(event))
-      default:
-        return
-    }
-  }
+  // const handleClick = event => {
+  //   console.log(event)
+  //   switch (event) {
+  //     case 'English':
+  //       return i18n.changeLanguage('en').then(() => setLanguage(event))
+  //     case '中文':
+  //       return i18n.changeLanguage('zh').then(() => setLanguage(event))
+  //     case '日本語':
+  //       return i18n.changeLanguage('ja').then(() => setLanguage(event))
+  //     case 'ไทย':
+  //       return i18n.changeLanguage('th').then(() => setLanguage(event))
+  //     case '한글':
+  //       return i18n.changeLanguage('ko').then(() => setLanguage(event))
+  //     default:
+  //       return i18n.changeLanguage('en').then(() => setLanguage(event))
+  //   }
+  // }
 
   const changeTabs = (newValue) => {
     history.push({
-        pathname: '/'+newValue,
-        state: {
-        }
+      pathname: '/' + newValue,
+      state: {
+      }
     })
   }
 
-  useEffect(() => {
-    const lng = switchLanguage()
-    setLanguage(lng);
-  });
+  // useEffect(() => {
+  //   const lng = switchLanguage()
+  //   setLanguage(lng);
+  // });
 
   let defaultTabValue = '';
-  if(window.location.hash != '#/' && window.location.hash!='#/index'){
+  if (window.location.hash != '#/' && window.location.hash != '#/index') {
     defaultTabValue = window.location.hash.split('/')[1];
   }
-  
+
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       {
-        tabArr.map((item,index)=>(
-          <ListItem key={'tab-'+index} className={classes.listItem}>
+        tabArr.map((item, index) => (
+          <ListItem key={'tab-' + index} className={classes.listItem}>
             <Button
-                type="button"
-                color="transparent"
-                onClick={changeTabs.bind(this,item.value)}
-                className={item.value == defaultTabValue ? classes.nowShowPage : ''}
-              >
-                {item.label}
-              </Button>
+              type="button"
+              color="transparent"
+              onClick={changeTabs.bind(this, item.value)}
+              className={item.value == defaultTabValue ? classes.nowShowPage : ''}
+            >
+              {item.label}
+            </Button>
           </ListItem>
         ))
       }
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           navDropdown
           hoverColor={dropdownHoverColor}
@@ -154,41 +167,56 @@ export default function HeaderLinks(props) {
             </a>
           ]}
         />
-      </ListItem>
+        
+      </ListItem> */}
+      {/* DARK mode buton */}
+      {/* <ListItem className={classes.listItem}>
+      <FormControlLabel
+        control={
+          <Switch
+            checked={state.checkedB}
+            onChange={handleChange}
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label="DARK"
+      />
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
           style={{
-              width: '180px',
-              margin: '12px 0',
-              fontSize: '14px',
-              fontWeight:'bold',
-              backgroundColor:'#4169e1',
-              color:'#fff',
-              boxShadow:'0 2px 2px 0 rgba(53, 56, 72, 0.14), 0 3px 1px -2px rgba(53, 56, 72, 0.2), 0 1px 5px 0 rgba(53, 56, 72, 0.12)',
+            width: '180px',
+            margin: '12px 0',
+            fontSize: '14px',
+            fontWeight: 'bold',
+            backgroundColor: '#4169e1',
+            color: '#fff',
+            boxShadow: '0 2px 2px 0 rgba(53, 56, 72, 0.14), 0 3px 1px -2px rgba(53, 56, 72, 0.2), 0 1px 5px 0 rgba(53, 56, 72, 0.12)',
           }}
           className={classes.Button}
           round
           type="button"
           color="primary"
-          onClick={connected?disconnectWallet:connectWallet}
+          onClick={connected ? disconnectWallet : connectWallet}
         >
           {connected ? (
             <>
-              <canvas ref={canvasRef} style={{ display: 'none'}}/>
+              <canvas ref={canvasRef} style={{ display: 'none' }} />
               <Avatar alt="address" src={dataUrl} style={{
-                width:'24px',
-                height:"24px",
-                marginRight:'4px',
-              }}/>{shortAddress}
+                width: '24px',
+                height: "24px",
+                marginRight: '4px',
+              }} />{shortAddress}
             </>
-          ):(
-            <>
-              <i className={"yfiiicon yfii-help-circle"} style={{
-                width:'24px',
-                marginRight:'4px',
-              }}/>{t('Vault-Wallet')}
-            </>
-          )}
+          ) : (
+              <>
+                <i className={"yfiiicon yfii-help-circle"} style={{
+                  width: '24px',
+                  marginRight: '4px',
+                }} />{t('Vault-Wallet')}
+              </>
+            )}
         </Button>
       </ListItem>
     </List>
