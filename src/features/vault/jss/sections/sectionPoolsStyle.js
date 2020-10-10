@@ -16,7 +16,7 @@ const secondStyle = {
   opacity: '0.8',
   fontFamily: 'Helvetica',
   fontSize: '14px',
-  color: '#444',
+  color: '#fff',
   letterSpacing: '0',
   lineHeight: '14px',
 };
@@ -25,7 +25,7 @@ const sectionPoolsStyle = theme => ({
   mainTitle:{
     fontFamily: 'Helvetica',
     fontSize: '32px',
-    color: '#333',
+    color: '#ccc',
     letterSpacing: '0',
     lineHeight: '32px',
     fontWeight: "550",
@@ -194,14 +194,14 @@ const sectionPoolsStyle = theme => ({
       }
   },
     accordion:{
-        backgroundColor:'rgba(44,48,64,.6)',
+        backgroundColor:'rgba(44,48,64,1)',
         color:'#fff',
         boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 0.06)',
         borderRadius: '8px',
     },
     details:{
       // padding: '12px 0',
-      background: 'rgba(44,48,64,.6)',
+      background: 'rgba(44,48,64,1)',
       boxShadow: '0 4px 8px 0 rgba(0,0,0,0.06)',
       borderRadius: '8px',
     },

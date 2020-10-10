@@ -82,7 +82,7 @@ const customDropdownStyle = theme => ({
     backgroundClip: "padding-box"
   },
   darkModalGround:{
-    backgroundColor:'rgba(44,48,64,.6)',
+    backgroundColor:'rgba(44,48,64,1)',
   },
   darkModalFont:{
     color:'#fff !important',

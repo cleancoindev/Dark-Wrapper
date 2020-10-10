@@ -19,7 +19,11 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 //  core pages
 //  style for this page
 import appStyle from "./jss/appStyle.js";
+import bgImage from "assets/img/dv_bg.jpg";
 
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles(appStyle);
 
 export default function App({ children }) {
@@ -27,7 +31,36 @@ export default function App({ children }) {
   const { t } = useTranslation();
   const { connectWallet, web3, address, networkId, connected, connectWalletPending } = useConnectWallet();
   const { disconnectWallet } = useDisconnectWallet();
-  const [ web3Modal, setModal ] = useState(null)
+  const [web3Modal, setModal] = useState(null)
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+    bg: {
+      backgroundColor:"#111",
+      backgroundSize: 'cover',
+    }
+  });
+  var darked = true;
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+    darked = event.target.checked;
+    console.log(darked)
+    if (darked == true) {
+      setState({
+        ...state, bg: {
+          background: "#111"
+        }, [event.target.name]: event.target.checked
+      })
+    } else {
+      setState({
+        ...state, bg: {
+          background: 'no-repeat center/100% url(' + bgImage + ')',
+          backgroundSize: 'cover',
+        }, [event.target.name]: event.target.checked
+      })
+    }
+  };
+
 
   useEffect(() => {
     const newModal = new Web3Modal({
@@ -51,7 +84,7 @@ export default function App({ children }) {
     setModal(newModal)
   }, [setModal])
 
-  
+
 
   useEffect(() => {
     if (web3Modal && (web3Modal.cachedProvider || window.ethereum)) {
@@ -67,7 +100,7 @@ export default function App({ children }) {
 
   return (
     <SnackbarProvider>
-      <div className={classes.page}>
+      <div className={classes.page} style={state.bg}>
         <Header
           brand="DARK"
           links={
@@ -81,11 +114,24 @@ export default function App({ children }) {
           }
           color="dark"
         />
+
         <div className={classes.container}>
-            <div className={classes.children}>
-              {Boolean(networkId === Number(process.env.NETWORK_ID)) && children}
-              <Notifier />
-            </div>
+          <Grid style={{ margin: '0 0 20px 92.5%' }}>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={state.checkedB}
+                  onChange={handleChange}
+                  name="checkedB"
+                  color="primary"
+                />
+              }
+              label="DARK"
+            /></Grid>
+          <div className={classes.children}>
+            {Boolean(networkId === Number(process.env.NETWORK_ID)) && children}
+            <Notifier />
+          </div>
           <FooterLinks />
         </div>
       </div>

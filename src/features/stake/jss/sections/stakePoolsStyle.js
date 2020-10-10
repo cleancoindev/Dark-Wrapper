@@ -20,7 +20,7 @@ const secondStyle = {
   lineHeight: '14px',
 };
 
-const normalBackgroundColor = 'rgba(44,48,64,.6)';
+const normalBackgroundColor = 'rgba(44,48,64,1)';
 const primaryColor = '#4169e1';
 const secondColor = '#4169e1';
 

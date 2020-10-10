@@ -6,7 +6,7 @@ const secondStyle = {
     opacity: '0.8',
     fontFamily: 'Helvetica',
     fontSize: '14px',
-    color: '#444',
+    color: '#fff',
     letterSpacing: '0',
     lineHeight: '14px',
 };
@@ -19,7 +19,7 @@ const zapCommandStyle = theme => ({
     },
     zapContainer:{
         width:'588px',
-        backgroundColor:'rgba(44,48,64,.6)',
+        backgroundColor:'rgba(44,48,64,1)',
         borderRadius:'24px',
         padding:'24px',
         

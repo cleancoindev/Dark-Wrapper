@@ -18,34 +18,13 @@ import Button from "components/CustomButtons/Button.js";
 // hooks
 import { useTranslation } from 'react-i18next';
 
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
 
 import styles from "assets/jss/material-kit-pro-react/components/headerLinksStyle.js";
 const useStyles = makeStyles(styles);
 
-{/* <Tabs className={classes.tabs} value={tabValue} onChange={changeTabs}>
-<Tab value='' label='Home' id='bar-tab-0'/>
-<Tab value='vault' label='Vault' id='bar-tab-1'/>
-<Tab value='stake' label='Stake' id='bar-tab-2'/>
-</Tabs> */}
-
-const tabArr = [
-  { value: '', label: 'Home' },
-  // {value:'vault',label:'Vault'},
-  { value: 'stake', label: 'Stake' },
-]
-
 export default function HeaderLinks(props) {
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-  });
-  const handleChange = (event) => {
-    console.log(event.target.checked);
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
+
+
 
   let history = useHistory();
   const { dropdownHoverColor, connected, address, connectWallet, disconnectWallet } = props;
@@ -53,7 +32,7 @@ export default function HeaderLinks(props) {
   const { t, i18n } = useTranslation();
   const [lng, setLanguage] = useState('en');
   const [shortAddress, setShortAddress] = useState('');
-  const [dataUrl, setDataUrl] = useState(null)
+  const [dataUrl, setDataUrl] = useState(null);
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -71,55 +50,6 @@ export default function HeaderLinks(props) {
     }
   }, [dataUrl, address])
 
-  // const switchLanguage = () => {
-  //   switch (i18n.language) {
-  //     case 'zh':
-  //     case 'zh-CN':
-  //       return '中文'
-  //     case 'en':
-  //       return 'English'
-  //     case 'ja':
-  //       return '日本語'
-  //     case 'th':
-  //       return 'ไทย'
-  //     case 'ko':
-  //       return '한글'
-  //     default:
-  //       return '中文'
-  //   }
-  // }
-
-  // const handleClick = event => {
-  //   console.log(event)
-  //   switch (event) {
-  //     case 'English':
-  //       return i18n.changeLanguage('en').then(() => setLanguage(event))
-  //     case '中文':
-  //       return i18n.changeLanguage('zh').then(() => setLanguage(event))
-  //     case '日本語':
-  //       return i18n.changeLanguage('ja').then(() => setLanguage(event))
-  //     case 'ไทย':
-  //       return i18n.changeLanguage('th').then(() => setLanguage(event))
-  //     case '한글':
-  //       return i18n.changeLanguage('ko').then(() => setLanguage(event))
-  //     default:
-  //       return i18n.changeLanguage('en').then(() => setLanguage(event))
-  //   }
-  // }
-
-  const changeTabs = (newValue) => {
-    history.push({
-      pathname: '/' + newValue,
-      state: {
-      }
-    })
-  }
-
-  // useEffect(() => {
-  //   const lng = switchLanguage()
-  //   setLanguage(lng);
-  // });
-
   let defaultTabValue = '';
   if (window.location.hash != '#/' && window.location.hash != '#/index') {
     defaultTabValue = window.location.hash.split('/')[1];
@@ -127,62 +57,11 @@ export default function HeaderLinks(props) {
 
   return (
     <List className={classes.list + " " + classes.mlAuto}>
-      {
-        tabArr.map((item, index) => (
-          <ListItem key={'tab-' + index} className={classes.listItem}>
-            <Button
-              type="button"
-              color="transparent"
-              onClick={changeTabs.bind(this, item.value)}
-              className={item.value == defaultTabValue ? classes.nowShowPage : ''}
-            >
-              {item.label}
-            </Button>
-          </ListItem>
-        ))
-      }
-      {/* <ListItem className={classes.listItem}>
-        <CustomDropdown
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonIcon={TranslateIcon}
-          buttonText={lng}
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent",
-          }}
-          onClick={handleClick}
-          dropdownList={[
-            "English",
-            "中文",
-            "日本語",
-            "한글",
-            "ไทย",
-            { divider: true },
-            <a
-              href="https://github.com/yfii/vault/tree/master/src/locales"
-              target="_blank"
-            >
-              Help to translate
-            </a>
-          ]}
-        />
-        
-      </ListItem> */}
       {/* DARK mode buton */}
-      {/* <ListItem className={classes.listItem}>
-      <FormControlLabel
-        control={
-          <Switch
-            checked={state.checkedB}
-            onChange={handleChange}
-            name="checkedB"
-            color="primary"
-          />
-        }
-        label="DARK"
-      />
-      </ListItem> */}
+      <ListItem className={classes.listItem}>
+
+      </ListItem>
+
       <ListItem className={classes.listItem}>
         <Button
           style={{

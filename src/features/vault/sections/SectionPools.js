@@ -334,13 +334,6 @@ export default function SectionPools() {
                             </Grid>
                           </Grid>
                         </Hidden>
-                        {pool.token === "RI" ? '' : (
-                          <Grid item xs={12} md={1} container justify='center' alignItems="center">
-                            <Grid item>
-                              <Typography className={classes.iconContainerMainTitle} variant="body2" gutterBottom noWrap> {depositedApy}</Typography>
-                              <Typography className={classes.iconContainerSubTitle} variant="body2">{t('Vault-ListAPY')}</Typography>
-                            </Grid>
-                          </Grid>)}
                       </Grid>
                     </Grid>
 
@@ -539,7 +532,6 @@ export default function SectionPools() {
           </Grid>
         )
       })}
-      <h3 className={classes.endTips}>TIPS:APY is not an accurate indicator for vault strategy performance. DARK will use Growth % to show performance of vault strategies from a specific time in the past to the current date</h3>
     </Grid>
   )
 }
