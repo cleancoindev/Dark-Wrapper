@@ -54,7 +54,7 @@ export default function App({ children }) {
     } else {
       setState({
         ...state, bg: {
-          background: 'no-repeat center/100% url(' + bgImage + ')',
+          background: 'no-repeat center/ cover url(' + bgImage + ')',
           backgroundSize: 'cover',
         }, [event.target.name]: event.target.checked
       })

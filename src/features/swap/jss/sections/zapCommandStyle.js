@@ -19,7 +19,7 @@ const zapCommandStyle = theme => ({
     },
     zapContainer:{
         width:'588px',
-        backgroundColor:'rgba(44,48,64,1)',
+        backgroundColor:'rgba(44,48,64,.8)',
         borderRadius:'24px',
         padding:'24px',
         
